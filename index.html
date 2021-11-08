@@ -22,6 +22,7 @@
 
     <title>Task Manager</title>
   </head>
+
   <body style="background-color: #ebf3ff" onload="loadExistingCards()">
     <!-- Modal -->
     <div
@@ -102,6 +103,31 @@
         </div>
       </div>
     </div>
+
+    <!-- Open Task Modal -->
+    <div
+      class="modal fade"
+      id="showTask"
+      tabindex="-1"
+      aria-labelledby="showTaskLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body task__modal__body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid">
@@ -120,7 +146,9 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-3 me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active fs-4"  aria-current="page" href="#">Home</a>
+                <a class="nav-link active fs-4" aria-current="page" href="#"
+                  >Home</a
+                >
               </li>
             </ul>
             <button
@@ -155,9 +183,7 @@
       </section>
 
       <!-- Task Container -->
-      <section class="task__container row">
-        
-      </section>
+      <section class="task__container row"></section>
     </main>
 
     <!-- JavaScript Bundle with Popper -->
